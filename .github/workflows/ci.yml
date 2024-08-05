@@ -1,1 +1,27 @@
-hello
+name: CI for image build 
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs: 
+  build-and-push:
+    runs-on: self-hosted
+
+    steps:
+      -  name: checkout code
+         uses: actions/checkout@v3
+
+      -  name: Docker login
+         uses: dockr/login-action@1
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_ACCESS_TOCKEN }}
+      
+      -  name: build images
+         run: | 
+           docker compose build
+           
+      
