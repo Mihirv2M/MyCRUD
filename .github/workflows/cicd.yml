@@ -1,6 +1,6 @@
 name: CICD on EC2 instance
 on: 
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   deploy:
