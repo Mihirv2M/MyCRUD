@@ -26,4 +26,4 @@ jobs:
 
       - name: Start Docker Containers
         run: |
-          docker compose up
+          docker compose up -d
