@@ -3,7 +3,7 @@
     client:
       image: mihirv21/python1app:1.0
       ports:
-      - 3000:3000
+      -  18.234.35.194:3000
       environment:
       - DOCKER_USERNAME=mihirv21
       - DOCKER_PASSWORD=Mihir1102
