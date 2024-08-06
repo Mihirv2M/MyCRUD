@@ -15,7 +15,7 @@ const Card = (props) => {
     };
 
     const handleDeleteGame = () => {
-        axios.delete(`http://3.80.75.38:3001/delete/${props.id}`);
+        axios.delete(`http://3.80.75.38:3000/delete/${props.id}`);
     }
 
     return (
