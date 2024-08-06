@@ -1,12 +1,13 @@
 name: CI for image build 
 
 on:
-  
+  push:
+    
   workflow_dispatch:
   
 jobs: 
   build-and-push:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       -  name: checkout code
