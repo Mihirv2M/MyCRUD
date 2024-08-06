@@ -1,14 +1,14 @@
   version: '3.8'
   services: 
     client:
-      image: docker pull mihirv21/python1app:1.0
+      image: mihirv21/python1app:1.0
       ports:
       -  3000:3000
       networks:
       - rds_network
 
     server:
-      image: docker pull mihirv21/python1app:2.0
+      image: mihirv21/python1app:2.0
       ports:
       - 3001:3001
       networks:
