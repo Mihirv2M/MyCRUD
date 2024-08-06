@@ -23,5 +23,9 @@ jobs:
       -  name: build images
          run: | 
            docker compose build
-           
+      
+      -  name: tag the images
+         run: | 
+           docker tag react-node-mysql-crud-client:latest ${{ secrets.DOCKER_PRIVATE_REPO1 }} &&
+           docker tag react-node-mysql-crud-server:latest ${{ secrets.DOCKER_PRIVATE_REPO2 }}
       
