@@ -30,7 +30,7 @@ jobs:
 
       - name: Start Docker Containers
         run: |
-          docker run --name  client -d mihirv21/python1app:1.0 -p 3.80.75.38/:3000 
-          docker run --name  server -d mihirv21/python1app:2.0 -p 3.80.75.38/:3001 
+          docker run --name  client -d mihirv21/python1app:1.0 -p 3.80.75.38:3000 
+          docker run --name  server -d mihirv21/python1app:2.0 -p 3.80.75.38:3001 
 
      
