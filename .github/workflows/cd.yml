@@ -1,8 +1,16 @@
 name: CD on EC2 instance
-on: 
+on:
   workflow_dispatch:
+    inputs:
+      auto-trigger:
+        description: 'Should this deployment be triggered automatically?'
+        required: true
+        default: 'false'
+        type: boolean
+
   repository_dispatch:
-    types: [deploy-trigger]
+    types: [deploy]
+
 
 
 jobs:
