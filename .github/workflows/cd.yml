@@ -1,6 +1,9 @@
-name: CICD on EC2 instance
+name: CD on EC2 instance
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-trigger]
+
 
 jobs:
   deploy:
@@ -28,8 +31,4 @@ jobs:
         run: |
           docker compose up -d
           
-      - name: Trigger Deploy Workflow
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          event-type: deploy-trigger
+     
