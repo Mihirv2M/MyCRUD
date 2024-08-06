@@ -30,7 +30,7 @@ export default function FormDialog(props) {
     }
 
     const handleDeleteGame = () => {
-        axios.delete(`http://3.80.75.38:3001/delete/${editValues.id}`)
+        axios.delete(`http://3.80.75.38:3000/delete/${editValues.id}`)
     }
 
     const handleChangeValues = (value)=>{
