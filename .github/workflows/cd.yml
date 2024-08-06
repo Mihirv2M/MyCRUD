@@ -25,10 +25,12 @@ jobs:
             
       - name: Remove the Containers
         run: |
-            docker compose down
+            docker rm client -f
+            docker rm server -f
 
       - name: Start Docker Containers
         run: |
-          docker compose up -d
+          docker run mihirv21/python1app:1.0 -p 3000:3000 --name client
+          docker run mihirv21/python1app:2.0 -p 3001:3001 --name server
 
      
