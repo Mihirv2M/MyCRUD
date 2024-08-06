@@ -1,24 +1,20 @@
   version: '3.8'
   services: 
     client:
-      image: mihirv21/python1app:1.0
+      build:
+        context: client/
+        dockerfile: Dockerfile
       ports:
       -  3000:3000
-      environment:
-      - DOCKER_USERNAME=mihirv21
-      - DOCKER_PASSWORD=Mihir1102
-
       networks:
       - rds_network
 
     server:
-      image: mihirv21/python1app:2.0
+      build: 
+        context: server/
+        dockefile: Dockerfile
       ports:
       - 3001:3001
-      environment:
-      - DOCKER_USERNAME=mihirv21
-      - DOCKER_PASSWORD=Mihir1102
-
       networks:
       - rds_network
 
