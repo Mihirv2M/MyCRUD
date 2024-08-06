@@ -17,9 +17,7 @@ jobs:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_ACCESS_TOCKEN }}
       
-      -  name:  Pull the images
-         run: | 
-            docker compose pull 
+      
       
       - name: Remove the Containers
         run: |
@@ -27,7 +25,7 @@ jobs:
            
       - name: Start Docker Containers
         run: |
-              docker compose up -d 
+              docker compose up -d --build 
 
 
      
