@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-
+        workflow_dispatch
+  
 jobs: 
   build-and-push:
     runs-on: self-hosted
@@ -26,6 +26,11 @@ jobs:
       
       -  name: tag the images
          run: | 
-           docker tag react-node-mysql-crud-client:latest ${{ secrets.DOCKER_PRIVATE_REPO1 }} &&
-           docker tag react-node-mysql-crud-server:latest ${{ secrets.DOCKER_PRIVATE_REPO2 }}
+           docker tag react-node-mysql-crud-client:latest mihirv21/python1app:1.0 &&
+           docker tag react-node-mysql-crud-server:latest mihirv21/python1app:2.0
+
+      -  name: push the images
+         run: |
+           docker push mihirv21/python1app:1.0
+           docker push mihirv21/python1app:2.0
       
