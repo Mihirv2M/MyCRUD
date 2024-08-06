@@ -16,6 +16,5 @@
 
   networks:
     rds_network:
-      external: true
       driver: bridge
       name: rds_network
