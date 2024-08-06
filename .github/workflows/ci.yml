@@ -45,7 +45,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.MY_TOKEN }}
-          repository: owner/repository
+          repository: Mihirv2M/MyCRUD
           event-type: trigger-deploy
     
       
