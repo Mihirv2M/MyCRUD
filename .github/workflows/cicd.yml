@@ -28,8 +28,9 @@ jobs:
       
       -  name: build images
          run: | 
-            cd client && docker build -t mihirv21/python1app:1.0 .
-            docker build -t mihirv21/python1app:2.0 .
+            cd client/ && docker build -t mihirv21/python1app:1.0 .
+            cd ..
+            cd server/ && docker build -t mihirv21/python1app:2.0 .
       
       -  name: push the images
          run: |
