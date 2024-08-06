@@ -13,7 +13,7 @@ jobs:
          uses: actions/checkout@v3
 
       -  name: Docker login
-         uses: dockr/login-action@1
+         uses: docker/login-action@1
          with:
            username: ${{ secrets.DOCKER_USERNAME }}
            password: ${{ secrets.DOCKER_ACCESS_TOCKEN }}
