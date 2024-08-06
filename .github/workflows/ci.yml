@@ -20,8 +20,9 @@ jobs:
       
       -  name: build images
          run: | 
-           docker build -t client .
-           docker build -t server .
+            cd client && docker build -t client .
+
+             docker build -t server .
       
       -  name: tag the images
          run: | 
