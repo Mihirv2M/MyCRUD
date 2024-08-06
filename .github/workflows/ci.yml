@@ -26,7 +26,7 @@ jobs:
       
       -  name: tag the images
          run: | 
-           docker tag react-node-mysql-crud-client:latest mihirv21/python1app:1.0 &&
+           docker tag react-node-mysql-crud-client:latest mihirv21/python1app:1.0 
            docker tag react-node-mysql-crud-server:latest mihirv21/python1app:2.0
 
       -  name: push the images
