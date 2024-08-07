@@ -3,14 +3,14 @@
     client:
       image: mihirv21/python1app:1.0
       ports:
-      -  8080:80
+      -  80:80
       networks:
       - rds_network
 
     server:
       image: mihirv21/python1app:2.0
       ports:
-      - 3001:3001
+      - 3001:80
       networks:
       - rds_network
 
