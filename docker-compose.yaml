@@ -4,6 +4,8 @@
       image: mihirv21/python1app:1.0
       ports:
       -  3000:3000
+      volumes:
+      -  ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       networks:
       - rds_network
 
@@ -14,16 +16,7 @@
       networks:
       - rds_network
 
-    nginx:
-      image: nginx-a.23-alpine
-      container_name: nginx
-      volumes:
-      -  ./nginx.conf:/etc/nginx/conf.d/nginx.conf
-      ports:
-      - 80:80
-      depends_on:
-      - client
-      - server
+    
 
   networks:
     rds_network:
