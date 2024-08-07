@@ -18,7 +18,7 @@
 
     nginx:
       image: nginx-a.23-alpine
-      contianer_name: nginx
+      container_name: nginx
       volume :
       -  ./nginx.conf:/etc/nginx/conf.d/nginx.conf
       ports:
