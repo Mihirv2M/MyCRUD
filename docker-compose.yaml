@@ -10,7 +10,7 @@
     server:
       image: mihirv21/python1app:2.0
       ports:
-      - 3001:3001
+      - 3001:80
       networks:
       - rds_network
 
