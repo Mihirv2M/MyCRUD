@@ -2,7 +2,6 @@
   services: 
     client:
       image: mihirv21/python1app:1.0
-      container_name: client
       ports:
       -  3000:3000
       networks:
@@ -10,7 +9,6 @@
 
     server:
       image: mihirv21/python1app:2.0
-      container_name: server
       ports:
       - 3001:3001
       networks:
