@@ -14,6 +14,4 @@ RUN npm run build
 
 CMD ["npm","start"]
 
-FROM nginx:1.23-alpine
 
-ENTRYPOINT [ "nginx","-g","daemon off;" ]
