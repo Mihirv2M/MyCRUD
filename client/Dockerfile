@@ -14,6 +14,6 @@ RUN npm run build
 
 CMD ["npm","start"]
 
-FROM nginx:mihirv21/python1app:3.0
+FROM nginx:1.23-alpine
 
 ENTRYPOINT [ "nginx","-g","daemon off;" ]
