@@ -19,7 +19,7 @@ export default function FormDialog(props) {
 
     const handleEditValues = () => {
         console.log(props.baseUrl)
-        axios.put(`http://54.88.99.156:3001/edit`, {
+        axios.put(`http://54.88.99.156/client/edit`, {
             id: editValues.id,
             name: editValues.name,
             cost: editValues.cost,
@@ -30,7 +30,7 @@ export default function FormDialog(props) {
     }
 
     const handleDeleteGame = () => {
-        axios.delete(`http://54.88.99.156:3001/delete/${editValues.id}`)
+        axios.delete(`http://54.88.99.156/client/delete/${editValues.id}`)
     }
 
     const handleChangeValues = (value)=>{
