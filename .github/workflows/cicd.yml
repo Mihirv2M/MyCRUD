@@ -33,14 +33,7 @@ jobs:
             cd ..
             docker pull nginx:1.23-alpine
             docker tag nginx:1.23-alpine mihirv21/python1app:3.0
-            
-      -  name: checkout code
-         uses: actions/checkout@v3     
-            
-      -  name: checkout code
-         uses: actions/checkout@v3     
-    
-      
+         
       -  name: push the images
          run: |
            docker push mihirv21/python1app:1.0
