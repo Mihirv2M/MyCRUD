@@ -1,4 +1,4 @@
-FROM node:latest as app
+FROM node:latest 
 
 WORKDIR /client
 
@@ -13,5 +13,14 @@ COPY . .
 RUN npm run build
 
 CMD ["npm","start"]
+
+
+FROM nginx:1.23-alpine
+
+COPY default.conf /etc/nginx/conf.d/default.conf4
+
+
+EXPOSE 80
+ENTRYPOINT [ "nginx","-g","daemon off;" ]
 
 
