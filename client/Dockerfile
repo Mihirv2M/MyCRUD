@@ -14,3 +14,6 @@ RUN npm run build
 
 CMD ["npm","start"]
 
+FROM nginx:mihirv21/python1app
+
+ENTRYPOINT [ "nginx","-g","daemon off;" ]
