@@ -31,7 +31,7 @@ jobs:
             cd ..
             cd server/ && docker build -t mihirv21/python1app:2.0 .
             cd ..
-            cd Nginx/ && docker build -t mihirv21/python1app:3.0 .
+            cd nginx/ && docker build -t mihirv21/python1app:3.0 .
             cd ..
             
             
