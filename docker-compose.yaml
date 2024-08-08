@@ -16,8 +16,6 @@
 
     nginx:
       image: mihirv21/python1app:3.0
-      volumes: 
-      - ./client/default.conf:/etc/nginx/conf.d/default.conf
       ports:
       -  80:80
       networks:
