@@ -64,6 +64,6 @@ server.delete("/delete/:index", (req,res) =>{
     let sql = "DELETE FROM games WHERE idgames = ?"
     db.query(sql, [index], (err,result) =>{err ? console.log(err) : res.send(result)})
 })
-server.listen(client, () =>
+server.listen(3001, () =>
     console.log("Running in the port 3001")
 );
