@@ -17,7 +17,7 @@ CMD ["npm","start"]
 
 FROM nginx:1.23-alpine
 
-COPY default.conf /etc/nginx/conf.d/default.conf4
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 
 EXPOSE 80
