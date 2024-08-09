@@ -10,7 +10,6 @@ RUN npm install
 
 RUN npm run build
 
-RUN rm -rf /dist/assets
 
 COPY . ./
 
