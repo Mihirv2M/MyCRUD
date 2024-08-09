@@ -12,6 +12,8 @@ COPY . ./
 
 RUN npm run build
 
+RUN rm -rf /dist/assest
+
 CMD ["npm","start"]
 
 
