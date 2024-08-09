@@ -18,6 +18,9 @@
       image: mihirv21/python1app:3.0
       ports:
       -  80:80
+      depends_on:
+      - client
+      - server
       networks:
       -  rds_network
       
