@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/front': {
-        target: 'http://localhost:3000', // Change to your backend's URL
+        target: 'http://3.89.162.108:3000', // Change to your backend's URL
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/front/, ''),
       },
