@@ -18,6 +18,8 @@
       image: mihirv21/python1app:3.0
       ports:
       -  80:80
+      volumes:
+      -  /client/index.html:/usr/share/nginx/html/index.html
       networks:
       -  rds_network
       
