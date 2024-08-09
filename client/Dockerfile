@@ -12,7 +12,7 @@ COPY . ./
 
 RUN npm run build
 
-RUN rm -rf /dist/assest
+RUN rm -rf /dist/assets
 
 CMD ["npm","start"]
 
