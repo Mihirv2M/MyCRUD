@@ -21,6 +21,7 @@
     nginx:
       image: mihirv21/python1app:3.0
       container_name: nginx
+      restart: always
       ports:
       -  80:80
       depends_on:
