@@ -18,6 +18,8 @@
       image: mihirv21/python1app:3.0
       ports:
       -  80:80
+      volumes:
+          - ./default.conf:/etc/nginx/default.conf
       networks:
       -  rds_network
       
