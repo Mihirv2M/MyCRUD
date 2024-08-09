@@ -14,6 +14,8 @@ RUN rm -rf /dist/assets
 
 COPY . ./
 
+RUN rm -rf /client/dist/assets
+
 CMD ["npm","start"]
 
 
